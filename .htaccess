@@ -1,0 +1,39 @@
+
+# Enable Gzip Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/x-javascript application/javascript application/json
+</IfModule>
+# Keep-alive (Improves performance by keeping the connection open)
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+# CDN (Cloudflare) optimization
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type, Origin"
+</IfModule>
+# Set expiry times for static resources
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|js|css|ico|webp|woff|woff2|ttf|svg)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+</IfModule>
+# Disable ETags to improve caching and reduce HTTP requests
+Header unset ETag
+FileETag None
+# Serve WebP images if supported by the browser
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_FILENAME} \.(jpe?g|png)$
+    RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+    RewriteRule ^(.*)\.(jpe?g|png)$ $1.webp [T=image/webp,L]
+</IfModule>
+# Enable HTTP/2 (if supported by your hosting environment)
+<IfModule http2_module>
+    Protocols h2 http/1.1
+</IfModule>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html [NC,L]
+
