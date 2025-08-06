@@ -2242,3 +2242,115 @@ aside .section-title h2:after {
   max-width: 500px;
   object-fit: cover;
 }
+/*--------------------------------------------------------------
+# Chefs
+--------------------------------------------------------------*/
+
+.filters {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters select {
+  padding: 8px;
+  font-size: 14px;
+}
+
+
+.grid {
+    display: grid
+;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.chefs .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #282828;
+  padding:10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.chefs .member .member-info {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+
+.chefs .member .member-info-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  transition: bottom 0.4s;
+}
+
+.chefs .member .member-info-content h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.chefs .member .member-info-content span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #fff;
+}
+
+.chefs .member .social {
+  position: absolute;
+  left: auto;
+  bottom: -38px;
+  right: 14px;
+  height: 48px;
+  transition: bottom ease-in-out 0.4s;
+  text-align: center;
+  top: 24px;
+
+}
+
+.chefs .member .social a {
+  transition: color 0.3s;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  background: #25d366;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px dashed #25d366; */
+  display: flex;
+}
+
+.chefs .member .social a:hover {
+  color: #cda45e;
+}
+
+.chefs .member .social i {
+  font-size: 21px;
+  color: #fff;
+}
+
+.chefs .member .member-info {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 212, 255, 0) 100%);
+  opacity: 1;
+  transition: 0.4s;
+}
+
+.chefs .member .member-info-content {
+  bottom: 23px;
+  transition: bottom 0.4s;
+  padding-left: 15px;
+  padding-right: 15px;
+}
