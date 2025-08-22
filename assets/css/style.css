@@ -2499,3 +2499,72 @@ aside .section-title h2:after {
                 font-size: 2rem;
             }
         }
+
+        .sticky-cta {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 9999;
+}
+
+.sticky-cta a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.sticky-cta a.whatsapp {
+  background: #25d366;
+}
+
+.sticky-cta a.phone {
+  background: #0078ff;
+}
+
+.sticky-cta a:hover {
+  transform: scale(1.05);
+}
+
+  @media (max-width: 767.98px) {
+
+    #hero h1 {
+      font-size: 32px;
+    }
+    #header .logo img {
+      height: 50px;
+    }
+    .sticky-cta {
+      flex-direction: column;
+      left: 0;
+      right: 0;
+      transform: translatex(0);
+      width: 100%;
+    }
+
+    .sticky-cta a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 50px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+  }
