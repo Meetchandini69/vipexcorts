@@ -31,19 +31,57 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-  <!-- <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "VIP Excorts",
-      "url": "https://vipexcorts.com/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://vipexcorts.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
+
+<!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "name": "Coimbatore Escort Services",
+        "serviceType": "Companionship, Private Escort, Call Girl Service",
+        "areaServed": {
+          "@type": "City",
+          "name": "Coimbatore"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Example Escorts",
+          "url": "https://example.com/escort-services/coimbatore"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Chennai Escort Services",
+        "serviceType": "Companionship, Dinner Dates, Travel Companion",
+        "areaServed": {
+          "@type": "City",
+          "name": "Chennai"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Example Escorts",
+          "url": "https://example.com/escort-services/chennai"
+        }
+      },
+      {
+        "@type": "Service",
+        "name": "Goa Escort Services",
+        "serviceType": "Party Companion, Private Escort, Luxury Companionship",
+        "areaServed": {
+          "@type": "City",
+          "name": "Goa"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Example Escorts",
+          "url": "https://example.com/escort-services/goa"
+        }
       }
-    }
-    </script> -->
+    ]
+  }
+  </script>
 
 <body>
 
@@ -138,6 +176,97 @@
     </div>
   </div>
 </section>
+
+  <!-- ======= Chefs Section ======= -->
+  <section id="chefs" class="chefs section">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Top Rated Escorts Availability in all Cities</h2>
+        <p>Browser and get to know about available companions based the location <p>
+      </div>
+
+<!-- FILTER SECTION -->
+  <div class="filter-box mb-4">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <label class="filter-label"><i class="bi bi-geo-alt"></i> Location</label>
+        <select id="locationFilter" class="form-select filter-select">
+          <option value="all">All Locations</option>
+          <option value="coimbatore" selected>Coimbatore</option>
+          <option value="chennai">Chennai</option>
+          <option value="goa">Goa</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="filter-label"><i class="bi bi-person-badge"></i> Escort Type</label>
+        <select id="typeFilter" class="form-select filter-select">
+          <option value="all">All Types</option>
+          <option value="independent">Independent</option>
+          <option value="housewife">Housewife</option>
+          <option value="russian">Russian</option>
+          <option value="vip">VIP Model</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="filter-label"><i class="bi bi-clock-history"></i> Availability</label>
+        <select id="availabilityFilter" class="form-select filter-select">
+          <option value="all">Any</option>
+          <option value="available-now">Available Now</option>
+          <option value="pre-booking">Pre-Booking</option>
+          <option value="24x7">24/7</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="row g-4" id="locationCards">
+
+    <!-- Coimbatore Card -->
+    <div class="col-md-4 location-card" 
+         data-location="coimbatore" 
+         data-type="independent" 
+         data-availability="available-now">
+      <div class="dark-card">
+        <h3>Coimbatore Escorts</h3>
+        <p class="mb-2">Available Escorts: <strong>15</strong></p>
+        <p>Explore top independent escorts and call girls in Coimbatore with high-class companionship.</p>
+        <!-- <a href="/escort-services/coimbatore" class="btn-theme">View Profiles</a> -->
+      </div>
+    </div>
+
+    <!-- Chennai Card -->
+    <div class="col-md-4 location-card" 
+         data-location="chennai" 
+         data-type="russian" 
+         data-availability="24x7">
+      <div class="dark-card">
+        <h3>Chennai Escorts</h3>
+        <p class="mb-2">Available Escorts: <strong>25</strong></p>
+        <p>Book premium Chennai escorts near you for dinner dates, private parties, and events.</p>
+        <!-- <a href="/escort-services/chennai" class="btn-theme">View Profiles</a> -->
+      </div>
+    </div>
+
+    <!-- Goa Card -->
+    <div class="col-md-4 location-card" 
+         data-location="goa" 
+         data-type="vip" 
+         data-availability="pre-booking">
+      <div class="dark-card">
+        <h3>Goa Escorts</h3>
+        <p class="mb-2">Available Escorts: <strong>12</strong></p>
+        <p>Enjoy luxury companions and party partners in Goa, available 24/7 for bookings.</p>
+        <!-- <a href="/escort-services/goa" class="btn-theme">View Profiles</a> -->
+      </div>
+    </div>
+
+  </div>
+
+    </div>
+  </section><!-- End Chefs Section -->
+
 <!-- ======= Why Us Section ======= -->
   <section id="why-us" class="why-us section">
     <div class="container" data-aos="fade-up">
@@ -366,56 +495,36 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 
-  <script>
-  // Sections Background Image
-  var pageSection = $(".bg-img, section");
-      pageSection.each(function (indx) {
-          if ($(this).attr("data-background")) {
-              $(this).css("background-image", "url(" + $(this).data("background") + ")");
-          }
-      });
+<script>
+  $(document).ready(function(){
+    function applyFilters() {
+      let selectedLocation = $("#locationFilter").val();
+      let selectedType = $("#typeFilter").val();
+      let selectedAvailability = $("#availabilityFilter").val();
 
- //  ======= Swiper slider 
-  var parallaxSlider;
-  var parallaxSliderOptions = {
-      speed: 2000
-      , autoplay: true
-      , parallax: true
-      , loop: true
-      , pagination: {
-          el: '.slider .parallax-slider .swiper-pagination'
-          , clickable: true
-      }
-      , on: {
-          init: function () {
-              var swiper = this;
-              for (var i = 0; i < swiper.slides.length; i++) {
-                  $(swiper.slides[i]).find('.bg-img').attr({
-                      'data-swiper-parallax': 0.75 * swiper.width
-                  });
-              }
-          }
-          , resize: function () {
-              this.update();
-          }
-      }
-      , pagination: {
-          el: '.slider .parallax-slider .swiper-pagination'
-          , type: 'fraction'
-      , }
-      , navigation: {
-          nextEl: '.slider .parallax-slider .next-ctrl'
-          , prevEl: '.slider .parallax-slider .prev-ctrl'
-      }
-  };
-  parallaxSlider = new Swiper('.slider .parallax-slider', parallaxSliderOptions);
+      $(".location-card").hide().filter(function() {
+        let locationMatch = (selectedLocation === "all" || $(this).data("location") === selectedLocation);
+        let typeMatch = (selectedType === "all" || $(this).data("type") === selectedType);
+        let availabilityMatch = (selectedAvailability === "all" || $(this).data("availability") === selectedAvailability);
 
-  </script>
+        return locationMatch && typeMatch && availabilityMatch;
+      }).show();
+    }
+
+    // Apply filters on change
+    $("#locationFilter, #typeFilter, #availabilityFilter").on("change", applyFilters);
+
+    // Run once on page load (default)
+    applyFilters();
+  });
+</script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TSMFVR8G3J"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}

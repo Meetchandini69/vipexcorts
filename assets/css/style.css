@@ -156,6 +156,21 @@ h3 {
   background: linear-gradient(to bottom, rgba(130,106,63,1) 0%,rgba(230,207,120,1) 50%,rgba(130,106,63,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#826a3f', endColorstr='#826a3f',GradientType=0 );
 }
+.btn-theme {
+  border-bottom: 1px solid #b39c5b;
+  border-top: 1px solid #b39c5b;
+  color: rgba(0, 0, 0, 0.85);
+  text-shadow: 0px 1px 1px #f8df82;
+  box-shadow: 0 0 2px #000;
+  background: rgb(130,106,63);
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: -moz-linear-gradient(top, rgba(130,106,63,1) 0%, rgba(230,207,120,1) 50%, rgba(130,106,63,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(130,106,63,1) 0%,rgba(230,207,120,1) 50%,rgba(130,106,63,1) 100%);
+  background: linear-gradient(to bottom, rgba(130,106,63,1) 0%,rgba(230,207,120,1) 50%,rgba(130,106,63,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#826a3f', endColorstr='#826a3f',GradientType=0 );
+}
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -492,7 +507,7 @@ h3 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/escorts/coimbatore-escorts.webp") top center;
+  background: url("../img/escort-services-in-coimbatore.png") top left;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -2500,7 +2515,7 @@ aside .section-title h2:after {
             }
         }
 
-        .sticky-cta {
+.sticky-cta {
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -2567,4 +2582,50 @@ aside .section-title h2:after {
   transition: all 0.3s ease;
 }
 
+  }
+
+.dark-card {
+    padding: 50px 30px;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    transition: all ease-in-out 0.3s;
+    background: #1a1814;
+  }
+
+  /* PREMIUM FILTER BOX */
+  .filter-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    padding: 15px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
+  }
+  .filter-select {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    appearance: none;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .filter-select:focus {
+    outline: none;
+    border-color: #ff4d5a;
+    box-shadow: 0 0 8px rgba(255,77,90,0.4);
+  }
+  /* FIX for OPTION VISIBILITY */
+  .filter-select option {
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+  .filter-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
