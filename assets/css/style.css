@@ -2,7 +2,7 @@
 /******* Base *******/
 body {
   font-family: "Open Sans", sans-serif;
-  background: #4d2600;
+  background: #341900;
   color: #fff2e6;
 }
 
@@ -2630,6 +2630,30 @@ aside .section-title h2:after {
   gap: 6px;
 }
 
+.profile-group ul {
+  display: flex;
+}
+.profile-group ul li {
+  margin: 0;
+  padding: 0;
+  border: 0px solid transparent;
+}
+.profile-group ul li:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #141414;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+.profile-group ul li img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
 .section-blk {
   padding: 40px 0;
 }
@@ -2804,6 +2828,11 @@ aside .section-title h2:after {
 .bg-dark {
   background-color: #141414 !important;
   color: #ffffff;
+}
+
+.bg-gradienttheme {
+  background: #3b2601;
+  background: linear-gradient(328deg, rgb(59, 38, 1) 0%, rgb(110, 68, 9) 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
