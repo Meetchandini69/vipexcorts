@@ -248,7 +248,37 @@
     }
   });
 
-  
+  document.addEventListener("DOMContentLoaded", function () {
+  const modalEl = document.getElementById('bottomModal');
+  const modal = new bootstrap.Modal(modalEl);
+  const stickyBar = document.getElementById('stickyBar');
+ const location = stickyBar.dataset.location;
+const formattedLocation = location.replace(/-/g, " ");
+
+// Check if count already stored
+let count = sessionStorage.getItem("escortCount");
+
+if (!count) {
+  count = Math.floor(Math.random() * 11) + 5; // 5–15
+  sessionStorage.setItem("escortCount", count);
+}
+
+stickyBar.innerText = `🔥 Only ${count} Escorts Available in ${formattedLocation} – Book Now`;
+
+  // Show modal after 2 sec
+  setTimeout(() => modal.show(), 2000);
+
+  // When modal closes بأي way → ALWAYS show sticky bar
+  modalEl.addEventListener('hidden.bs.modal', function () {
+    stickyBar.classList.add("show");
+  });
+
+  // Click sticky bar → reopen modal
+  stickyBar.addEventListener("click", function () {
+    modal.show();
+    stickyBar.classList.remove("show");
+  });
+});
 
   /**
    * Testimonials slider
